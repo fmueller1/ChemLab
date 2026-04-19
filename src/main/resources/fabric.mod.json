@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "chemlab",
+	"version": "${version}",
+	"name": "Chemlab",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/chemlab/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"chemlab.chemlab.Chemlab"
+		],
+		"client": [
+			"chemlab.chemlab.client.ChemlabClient"
+		]
+	},
+	"mixins": [
+		"chemlab.mixins.json",
+		{
+			"config": "chemlab.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
